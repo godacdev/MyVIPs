@@ -1,0 +1,13 @@
+@charset "UTF-8";
+figure {
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 300px;
+    max-height: 300px;
+    display: flex;
+    justify-content: center;
+    margin-left: 300px;
+}
+footer{
+    margin-top: 500px;
+}
