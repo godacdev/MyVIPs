@@ -11,7 +11,5 @@ $(document).ready(()=>{
     $('#entrar').click((e)=>{
         e.preventDefault();
         window.location.href="dashboard.html";
-    })
-
-    
+    }) 
 });

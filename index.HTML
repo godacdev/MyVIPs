@@ -159,37 +159,21 @@
             <div class="modal-body">
               <form id="form-login" class="bg-secondary text-white p-4">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
-                  />
-                  <small id="emailHelp" class="form-text text-muted"
-                    >Nós nunca iremos compartilhar seu email com ninguém</small
-                  >
+                  <label for="login-username">Username</label>
+                  <input type="text" class="form-control" id="login-username" />
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Senha</label>
+                  <label for="login-senha">Senha</label>
                   <input
                     type="password"
                     class="form-control"
-                    id="exampleInputPassword1"
+                    id="login-senha"
                   />
-                </div>
-                <div class="form-group form-check">
-                  <input
-                    type="checkbox"
-                    class="form-check-input"
-                    id="exampleCheck1"
-                  />
-                  <label class="form-check-label" for="exampleCheck1"
-                    >Continuar Logado</label
-                  >
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <button id ="entrar" class="btn btn-primary" type="button">Entrar</button>
+                  <button id="btn-logar" class="btn btn-primary" type="button">
+                    Entrar
+                  </button>
                 </div>
               </form>
             </div>
@@ -221,46 +205,41 @@
             <div class="modal-body">
               <form id="form-registro" class="bg-secondary text-white p-4">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email</label>
+                  <label for="input-registro-username">Username</label>
                   <input
-                    type="email"
+                    type="text"
                     class="form-control"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
+                    id="input-registro-username"
                   />
                   <small id="emailHelp" class="form-text text-muted"
                     >Nós nunca iremos compartilhar seu email com ninguém</small
                   >
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Senha</label>
+                  <label for="input-registro-senha">Senha</label>
                   <input
                     type="password"
                     class="form-control"
-                    id="exampleInputPassword1"
+                    id="input-registro-senha"
                   />
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Repita a Senha</label>
+                  <label for="input-registro-repetir-senha"
+                    >Repita a Senha</label
+                  >
                   <input
                     type="password"
                     class="form-control"
-                    id="exampleInputPassword1"
+                    id="input-registro-repetir-senha"
                   />
-                </div>
-                <div class="form-group form-check">
-                  <input
-                    type="checkbox"
-                    class="form-check-input"
-                    id="exampleCheck1"
-                  />
-                  <label class="form-check-label" for="exampleCheck1"
-                    >Mantenha-me Atualizado</label
-                  >
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <button class="btn btn-primary" type="button">
+                  <button
+                    id="btn-cadastrar"
+                    class="btn btn-primary my-4"
+                    type="button"
+                  >
                     Criar Conta
                   </button>
                 </div>
@@ -405,9 +384,8 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <!-- SCRIPT -->
-    <!--  -->
+    <script type="module" src="./main.js"></script>
+    <script src="./storage.js"></script>
+    <script src="./scripts.js"></script>
   </body>
-  <!-- Scripts -->
-  <script src="scripts.js"></script>
 </html>
