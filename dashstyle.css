@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+body{
+    background-image: url(_img/fundopreto.png);
+}
 
 /* HEADER */
 
@@ -11,7 +13,7 @@ header > nav {
     margin-top: 20px;
     box-shadow: 2px;
     border-radius: 5px;
-    border: 3px solid #F8F9FA;
+    border: 3px solid white;
     width: 800px;
     padding: 20px;
     margin-left: auto;
@@ -43,7 +45,12 @@ header > nav {
     text-align: center;
 }
 
-
+#cabeçalho {
+    color: black;
+}
+label{
+    color:black;
+}
 /* MAIN CONTENT */
 #conteudo{
     display: block;
@@ -56,7 +63,7 @@ header > nav {
     border: 3px solid #F8F9FA;
     background-color: #F8F9FA;
 }
-
+ 
 body > main > div.jumbotron { 
     padding: 10px;
 }
