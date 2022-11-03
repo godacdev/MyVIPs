@@ -4,6 +4,10 @@ $(document).ready(()=>{
         e.preventDefault();
         $('#modalLogin').modal('toggle');
     })
+    $('#btn-registro').click((e)=>{
+        e.preventDefault();
+        $('#modalRegistro').modal('toggle');
+    })
 
     
 });

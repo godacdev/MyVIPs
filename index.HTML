@@ -32,13 +32,14 @@
           <a href="" id="btn-login" class="login">
             <h2>Login</h2>
           </a>
-          <a href="" class="login">
+          <a href="" id="btn-registro" class="registro">
             <h2>Registro</h2>
           </a>
         </div>
       </nav>
     </header>
-    
+
+    <!-- CAROUSEL -->
     <section>
       <figure>
         <div
@@ -90,20 +91,45 @@
         </div>
       </figure>
     </section>
-    
 
+    <!-- MAIN -->
     <main id="conteudo">
       <div class="jumbotron">
-        <h1 class="display-4">Bem-vindo!</h1>
+        <h1 class="display-4">Listas Analógicas São Passado!</h1>
         <p class="lead">
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
+          Todas as informações sobre os convidados em um só lugar
         </p>
         <hr class="my-4" />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin orci eget vehicula vulputate. Sed ut mattis diam. Sed vitae feugiat dui. Nullam elit est, condimentum at lectus ac, bibendum dapibus mauris. Aenean eu eros eros. Pellentesque gravida eu tortor sed vestibulum. Nulla lectus augue, iaculis laoreet sodales id, tempor vitae lacus. Proin egestas aliquet hendrerit. Fusce tincidunt auctor massa at congue. Maecenas ullamcorper est non varius malesuada. Sed a mi tellus. Vivamus vel cursus nisi. Mauris nec pellentesque arcu, at interdum eros. Quisque ante est, porta vel eros sed, auctor luctus urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
-Aenean id lacus auctor, vehicula turpis a, suscipit est. Fusce tincidunt fringilla ultricies. Phasellus venenatis nisi sed ipsum porta luctus. Pellentesque tortor tellus, lobortis sit amet feugiat porta, euismod eu est. Donec in tempor velit, nec rhoncus justo. Proin vitae pellentesque ante. Maecenas id laoreet felis. Sed convallis id ex non volutpat. Curabitur efficitur interdum erat, at consequat erat fringilla at. Phasellus sit amet feugiat ex. Nunc dui massa, lacinia ut faucibus ac, condimentum vel augue. Aenean ornare ex sit amet aliquet pretium. Ut sodales nec lectus vel tempor. Vestibulum laoreet, tortor ac commodo gravida, enim risus commodo risus, quis commodo libero felis vel arcu..
+          A família, os amigos, os colegas de trabalho... Organize-os
+          confortavelmente com a ferramenta de Convidados e gerencie todos os
+          detalhes. Organize facilmente todos os detalhes da sua lista de
+          convidados: crie grupos, assinale cardápios e mesas e peça de forma
+          rápida e simples a confirmação de presença ou o endereço para enviar o
+          convite.
+        </p>
+        <p>
+          Crie grupos de convidados Reúna os seus convidados em diferentes
+          grupos, visualize o seu mapa de mesas e, depois, organize-as de forma
+          fácil e divertida.
+        </p>
+        <p>
+          Acompanhe diariamente os convidados que já confirmaram presença e quem
+          ainda não respondeu à sua solicitação.
+        </p>
+        <p>
+          Já está com os seus convites prontos para enviar, mas não sabe os
+          endereços de alguns convidados? Envie um e-mail para que preencham a
+          sua informação, recolha e organize facilmente os seus dados por meio
+          do Gestor de Convidados e exporte-os para organizar o envio. Você verá
+          como é fácil e prático!
+        </p>
+        <p>
+          Criar e organizar a lista de convidados é, muitas vezes, um motivo de
+          discussão entre os casais que estão organizando o seu casamento. O
+          Gestor de Convidados evitará mais esse problema. Importe e adicione
+          convidados, crie grupos, envie confirmação de presença por e-mail ou
+          defina o tipo de cardápio.
         </p>
       </div>
     </main>
@@ -120,7 +146,7 @@ Aenean id lacus auctor, vehicula turpis a, suscipit est. Fusce tincidunt fringil
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Bem Vindo</h5>
               <button
                 type="button"
                 class="close"
@@ -133,7 +159,7 @@ Aenean id lacus auctor, vehicula turpis a, suscipit est. Fusce tincidunt fringil
             <div class="modal-body">
               <form id="form-login" class="bg-secondary text-white p-4">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
+                  <label for="exampleInputEmail1">Email</label>
                   <input
                     type="email"
                     class="form-control"
@@ -141,11 +167,11 @@ Aenean id lacus auctor, vehicula turpis a, suscipit est. Fusce tincidunt fringil
                     aria-describedby="emailHelp"
                   />
                   <small id="emailHelp" class="form-text text-muted"
-                    >We'll never share your email with anyone else.</small
+                    >Nós nunca iremos compartilhar seu email com ninguém</small
                   >
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="exampleInputPassword1">Senha</label>
                   <input
                     type="password"
                     class="form-control"
@@ -159,29 +185,93 @@ Aenean id lacus auctor, vehicula turpis a, suscipit est. Fusce tincidunt fringil
                     id="exampleCheck1"
                   />
                   <label class="form-check-label" for="exampleCheck1"
-                    >Check me out</label
+                    >Continuar Logado</label
                   >
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button class="btn btn-primary" type="button">Entrar</button>
+                </div>
               </form>
             </div>
-            <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="modalRegistro"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Vamos Criar Sua Conta
+              </h5>
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="close"
                 data-dismiss="modal"
+                aria-label="Close"
               >
-                Close
+                <span aria-hidden="true">&times;</span>
               </button>
-              <button type="button" class="btn btn-primary">
-                Save changes
-              </button>
+            </div>
+            <div class="modal-body">
+              <form id="form-registro" class="bg-secondary text-white p-4">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                  />
+                  <small id="emailHelp" class="form-text text-muted"
+                    >Nós nunca iremos compartilhar seu email com ninguém</small
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Senha</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Repita a Senha</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                  />
+                </div>
+                <div class="form-group form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Mantenha-me Atualizado</label
+                  >
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button class="btn btn-primary" type="button">
+                    Criar Conta
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- FOOTER -->
     <footer class="text-center text-lg-start bg-light text-muted">
       <!-- Section: Social media -->
       <section
