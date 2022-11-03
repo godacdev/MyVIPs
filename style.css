@@ -1,13 +1,47 @@
 @charset "UTF-8";
-figure {
+
+/* HEADER */
+
+header { 
+    margin: 0;
+}
+
+header > nav {
+    box-shadow: 2px;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    width: 800px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FIGURE */ 
+section > figure {
+    margin-top: 20px;
     min-width: 500px;
     max-width: 500px;
     min-height: 300px;
     max-height: 300px;
     display: flex;
-    justify-content: center;
-    margin-left: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* MAIN CONTENT */
+#conteudo{
+    display: block;
+    width: 750px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    background-color: #F8F9FA;
+
 }
 footer{
-    margin-top: 500px;
+    margin-top: 50px;
 }
+
