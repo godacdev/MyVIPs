@@ -11,5 +11,15 @@ $(document).ready(()=>{
     $('#entrar').click((e)=>{
         e.preventDefault();
         window.location.href="dashboard.html";
-    }) 
+    })
+    
+    $("#fechaLogin").click((e)=>{
+        $("#modal-container").hide();
+        window.location.href="index.html";
+    })
+    $("#fecharegistro").click((e)=>{
+        $("#modal-container").hide();
+        window.location.href="index.html";
+    })
+
 });
