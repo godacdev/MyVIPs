@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+
+/* HEADER */
+
+header { 
+    margin: 0;
+}
+
+header > nav {
+    margin-top: 20px;
+    box-shadow: 2px;
+    border-radius: 5px;
+    border: 3px solid #F8F9FA;
+    width: 800px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logovip{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#formulariogeral{
+    display: flex;
+    justify-content: center;
+}
+#cabeçalho{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+#statusbox{
+    display: flex;
+    justify-content: center;
+}
+
+#titulotabela{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* MAIN CONTENT */
+#conteudo{
+    display: block;
+    width: 800px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px;
+    border-radius: 5px;
+    border: 3px solid #F8F9FA;
+    background-color: #F8F9FA;
+}
+
+body > main > div.jumbotron { 
+    padding: 10px;
+}
+
+/* Footr */ 
+
+footer{
+    width: 800px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 2px;
+}

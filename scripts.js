@@ -8,6 +8,10 @@ $(document).ready(()=>{
         e.preventDefault();
         $('#modalRegistro').modal('toggle');
     })
+    $('#entrar').click((e)=>{
+        e.preventDefault();
+        window.location.href="dashboard.html";
+    })
 
     
 });
