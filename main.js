@@ -107,7 +107,7 @@ function CadastrarUser (username, senha) {
         setJsonItem(newUser.Username, newUser);
         setItem('userLogado', newUser.Username);
     } else {
-        alert('Username já existe! Tente novamente.')
+        alert('Username já existe! Tente novamente.');
     }
 }
 
