@@ -113,3 +113,11 @@ const limpaCampos = () =>{
     $("#nome").val("");
     $("#email").val("");
 }
+
+function verificaLogin () {
+  if (getItem('userLogado')) {
+    return true
+  } else {
+    return false
+  }
+}
