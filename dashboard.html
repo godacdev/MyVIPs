@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - Revisão JS + Bootstrap</title>
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="dashstyle.css">
-</head>
-<body>
-    <header> 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="dashstyle.css" />
+  </head>
+  <body>
+    <header>
       <header>
         <nav class="navbar bg-light">
-          <div id = "logovip" class="container-fluid">
+          <div id="logovip" class="container-fluid">
             <a class="navbar-brand" href="index.HTML">
               <img
                 src="_img/diamond.png"
@@ -23,100 +28,127 @@
                 class="d-inline-block align-text-top"
               />
               <h1>MyVIPs</h1>
-            </a> 
+            </a>
           </div>
         </nav>
       </header>
-        </nav> 
-        <section id="formulariogeral" class="container d-flex justify-content-center my-4 bg-primary text-white">
-            <fieldset class="col-6">
-                <h2 id="cabeçalho">Formulário de Convidados</h2>
-                <div class="row">
-                    <div class="form-group d-flex">
-                        <label for="nome" class="col-2">Nome</label>
-                        <input type="text" id="nome" class="form-control">
-                    </div>
-                </div>
-                <div class="row my-2">
-                    <div class="form-group d-flex">
-                        <label for="email" class="col-2">Email</label>
-                        <input type="email" id="email" class="form-control">
-                    </div>
-                </div>
-                <div class="row my-3">
-                  <div class="form-group d-flex">
-                      <label for="email" class="col-2">Idade</label>
-                      <input type="email" id="email" class="form-control">
-                  </div>
-              </div>
-              <div class="row my-4">
-                <div id = "statusbox"class="form-group d-flex">
-                    <label for="email" class="col-2">Status</label>
-                    <select name="status" id="select-status">
-                      <option value="VIP">VIP</option>
-                      <option value="Staff">Staff</option>
-                      <option value="Cringe">Cringe</option>
-                    </select>
-                </div>
-            </div>
-                <div class="row my-5">
-                    <div class="form-group d-flex">
-                        <label for="" class="col-2">
-                          <input type="hidden" name="id" id="id">
-                        </label>
-                        <button id="btn-salvar" class="col-10 btn btn-block btn-success">Salvar</button>
-                    </div>
-                    
-                </div>
-            </fieldset>
-
-          </section>
-          <div id="msg" class="container d-flex justify-content-center">
-            <div class="alert alert-danger col-12" role="alert">
-              A simple danger alert—check it out!
+      <section
+        id="formulariogeral"
+        class="container d-flex justify-content-center my-4 bg-primary text-white"
+      >
+        <fieldset class="col-6">
+          <h2 id="cabeçalho">Formulário de Convidados</h2>
+          <div class="row">
+            <div class="form-group d-flex">
+              <label for="input-nome" class="col-2">Nome</label>
+              <input type="text" id="input-nome" class="form-control" />
             </div>
           </div>
-    </header>  
+          <div class="row my-2">
+            <div class="form-group d-flex">
+              <label for="input-email" class="col-2">Email</label>
+              <input type="email" id="input-email" class="form-control" />
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="form-group d-flex">
+              <label for="input-idade" class="col-2">Idade</label>
+              <input type="number" id="input-idade" class="form-control" />
+            </div>
+          </div>
+          <div class="row my-4">
+            <div id="statusbox" class="form-group d-flex">
+              <label for="select-status" class="col-2">Status</label>
+              <select
+                name="select-status"
+                id="select-status"
+                class="form-control"
+              >
+                <option value="VIP">VIP</option>
+                <option value="Staff">Staff</option>
+                <option value="Cringe">Cringe</option>
+              </select>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="form-group d-flex">
+              <label for="" class="col-2">
+                <input type="hidden" name="id" id="id" />
+              </label>
+              <button
+                id="btn-cria-vip"
+                class="col-10 btn btn-block btn-success"
+              >
+                Criar VIP
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+      <div id="msg" class="container d-flex justify-content-center">
+        <div class="alert alert-danger col-12" role="alert">
+          A simple danger alert—check it out!
+        </div>
+      </div>
+    </header>
+
     <main class="card">
       <div class="card-header bg-primary">
-        <h1 id="titulotabela"class="text-white">Seus Convidados</h1>
+        <h1 id="titulotabela" class="text-white">Seus Convidados</h1>
       </div>
       <div class="card-body container">
         <table class="table table-striped table-hover">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>Idade</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody class="text-primary" id="lista-contatos"></tbody>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Idade</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody class="text-primary" id="lista-contatos"></tbody>
         </table>
       </div>
-    </main>  
+    </main>
 
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
-      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div
+        id="liveToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
         <div class="toast-header">
           <!-- <img src="_img/cosmos.jpg" class="rounded me-2" alt="..."> -->
           <strong class="me-auto">Alerta</strong>
           <small>Validação...</small>
-          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
         </div>
-        <div class="toast-body">
-          Hello, world! This is a toast message.
-        </div>
+        <div class="toast-body">Hello, world! This is a toast message.</div>
       </div>
     </div>
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
     <!-- scritps -->
     <script type="module" src="./main.js"></script>
     <script src="./storage.js"></script>
     <script src="./dashboard.js"></script>
-</body>
+  </body>
 </html>
