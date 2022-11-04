@@ -127,14 +127,14 @@ function verificaLogin () {
     }
 }
 
-function removeItemList () {
+function removeItemList (id) {
     let user = getJsonItem(getItem('userLogado'));
     user.ContatosVIP.forEach(vip => {
-
+        if (vip.Id);
     })
 }
 
-function editItemList () {
+function editItemList (id) {
 
 }
 
