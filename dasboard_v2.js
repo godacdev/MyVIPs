@@ -108,8 +108,8 @@ function ListarContatos() {
         var colStatus = document.createElement("td");
         var colActions = document.createElement("td");
         $(colActions).html(`<div class="d-flex">
-            <button id="btn-excluir-${vip.Id}" class="btn btn-sm btn-danger btn-actions">&times;</button>
-            <button id="btn-editar-${vip.Id}" class="btn btn-sm btn-warning btn-actions">&times;</button>
+            <button id="btn-excluir-${vip.Id}" class="btn btn-sm btn-danger btn-actions"><img src="_img/trash.svg"></button>
+            <button id="btn-editar-${vip.Id}" class="btn btn-sm btn-warning btn-actions"><img src="_img/pencil.svg"></button>
         </div>`);
         $(colId).html(vip.Id);
         $(colNome).html(vip.Nome);
