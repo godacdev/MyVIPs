@@ -10,7 +10,8 @@ class User {
     }
 
     static FindVIP (id) {
-        return this.ContatosVIP.filter(vip => {
+        let user = getJsonItem(getItem('userLogado'));
+        return user.ContatosVIP.filter(vip => {
             if (vip.Id == id) {
                 return vip;
             }
@@ -58,7 +59,9 @@ class VIPs {
 
 $(document).ready(() => {
 
+    $('#btn-edita-vip').hide();
     $("#msg .alert").hide();
+    LimpaCampos();
 
     if (!verificaLogin()) {
         window.location.href = "index.html";
@@ -67,20 +70,21 @@ $(document).ready(() => {
     $('#btn-cria-vip').click((e) => {
         e.preventDefault();
         if (getItem('userLogado')) {
-            let user = JSON.parse(getItem(getItem('userLogado')))
-            console.log(user);
-            let nome = $('#input-nome').val();
-            let email = $('#input-email').val();
-            let idade = $('#input-idade').val();
-            let status = $('#select-status').val();
-            let vip = User.CadastrarVIP(nome, email, idade, status);
-            user.ContatosVIP.push(vip);
-            setJsonItem(user.Username, user);
+            CreateVIP();
         } else {
             alert('Ei, o que você está fazendo aqui?, você não está logado!');
         }
 
+        LimpaCampos();
         ListarContatos();
+    })
+
+    $('#btn-edita-vip').click((e) => {
+        e.preventDefault();
+        let vipId = $('#input-id-vip').val();
+        EditVIP(vipId);
+        $('#btn-cria-vip').show();
+        $('#btn-edita-vip').hide();
     })
 
     ListarContatos();
@@ -104,10 +108,9 @@ function ListarContatos() {
         var colStatus = document.createElement("td");
         var colActions = document.createElement("td");
         $(colActions).html(`<div class="d-flex">
-            <button class="btn btn-sm btn-danger btn-actions btn-excluir-vip"><img src="_img/trash.svg"></button>
-            <button class="btn btn-sm btn-warning btn-actions btn-editar-vip"><img src="_img/pencil.svg"></button>
+            <button id="btn-excluir-${vip.Id}" class="btn btn-sm btn-danger btn-actions">&times;</button>
+            <button id="btn-editar-${vip.Id}" class="btn btn-sm btn-warning btn-actions">&times;</button>
         </div>`);
-
         $(colId).html(vip.Id);
         $(colNome).html(vip.Nome);
         $(colEmail).html(vip.Email);
@@ -129,7 +132,18 @@ function verificaLogin () {
     }
 }
 
-function removeItemList (id) {
+function CreateVIP () {
+    let user = getJsonItem(getItem('userLogado'));
+    let nome = $('#input-nome').val();
+    let email = $('#input-email').val();
+    let idade = $('#input-idade').val();
+    let status = $('#select-status').val();
+    let vip = User.CadastrarVIP(nome, email, idade, status);
+    user.ContatosVIP.push(vip);
+    setJsonItem(user.Username, user);
+}
+
+function RemoveVIP (id) {
     let user = getJsonItem(getItem('userLogado'));
     let contagem = 0;
     user.ContatosVIP.forEach(vip => {
@@ -139,12 +153,48 @@ function removeItemList (id) {
         contagem++;
     })
     setJsonItem(user.Username, user);
+    LimpaCampos();
+    ListarContatos();
+    $('#btn-cria-vip').show();
+    $('#btn-edita-vip').hide();
+}
+
+function EditVIP (id) {
+    let user = getJsonItem(getItem('userLogado'));
+    let contagem = 0;
+    user.ContatosVIP.forEach(vip => {
+        if (vip.Id === id) {
+            return user.ContatosVIP.splice(contagem, 1);
+        }
+        contagem++;
+    })
+
+    let nome = $('#input-nome').val();
+    let email = $('#input-email').val();
+    let idade = $('#input-idade').val();
+    let status = $('#select-status').val();
+    let vip = User.CadastrarVIP(nome, email, idade, status);
+    vip.Id = id;
+    user.ContatosVIP.splice(contagem, 0, vip);
+    setJsonItem(user.Username, user);
+
+    LimpaCampos();
     ListarContatos();
 }
 
+function PopulaEditForm (id) {
+    $('#btn-cria-vip').hide();
+    $('#btn-edita-vip').show();
+    let vip = User.FindVIP(id);
+    $('#input-nome').val(vip[0].Nome);
+    $('#input-email').val(vip[0].Email);
+    $('#input-idade').val(vip[0].Idade);
+    $('#select-status').val(vip[0].Status);
+    $('#input-id-vip').val(vip[0].Id);
+}
 function addEventDeleteVip (id) {
-    $('.btn-excluir-vip').click((e) => {
-        removeItemList(id);
+    $(`#btn-excluir-${id}`).click((e) => {
+        RemoveVIP(id);
     })
 }
 
@@ -152,7 +202,15 @@ function editItemList (id) {
 
 }
 function addEventEditVip (id) {
-    $('.btn-editar-vip').click((e) => {
-        removeItemList(id);
+    $(`#btn-editar-${id}`).click((e) => {
+        PopulaEditForm(id);
     })
+}
+
+function LimpaCampos () {
+    $('#input-nome').val("");
+    $('#input-email').val("");
+    $('#input-idade').val("");
+    $('#select-status').val("");
+    $('#input-id-vip').val("");
 }
