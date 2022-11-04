@@ -11,20 +11,20 @@ $(document).ready(() => {
     window.location.href = "index.html";
   }
 
-  $("#btn-salvar").click((e) => salvarContato());
+  $("#btn-cria-vip").click((e) => salvarContato());
 
   listarContatos();
 });
 
 const regEventClickTr = () => {
     $("tr").click((e) => {
-        let tr = $(e.target.parentElement);
-        let regLinha = tr.find("td");
-        let tdId = regLinha[0];
-        $("#id").val($(tdId).html());
-        $("#nome").val($(regLinha[1]).html());
-        $("#email").val($(regLinha[2]).html());
-      });
+      let tr = $(e.target.parentElement);
+      let regLinha = tr.find("td");
+      let tdId = regLinha[0];
+      $("#id").val($(tdId).html());
+      $("#nome").val($(regLinha[1]).html());
+      $("#email").val($(regLinha[2]).html());
+    });
 }
 
 const salvarContato = () => {

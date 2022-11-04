@@ -79,3 +79,7 @@ footer{
     border-radius: 5px;
     box-shadow: 2px;
 }
+
+.btn-actions {
+    margin-right: 10px;
+}

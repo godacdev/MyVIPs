@@ -80,23 +80,6 @@ $('document').ready(() => {
         let senha = $('#login-senha').val();
         LogarUser(username, senha);
     })
-
-    $('#btn-cria-vip').click((e) => {
-        e.preventDefault();
-        if (getItem('userLogado')) {
-            let user = JSON.parse(getItem(getItem('userLogado')))
-            console.log(user);
-            let nome = $('#input-nome').val();
-            let email = $('#input-email').val();
-            let idade = $('#input-idade').val();
-            let status = $('#select-status').val();
-            let vip = User.CadastrarVIP(nome, email, idade, status);
-            user.ContatosVIP.push(vip);
-            setJsonItem(user.Username, user);
-        } else {
-            alert('Ei, o que você está fazendo aqui?, você não está logado!')
-        }
-    })
 })
 
 // Functions
