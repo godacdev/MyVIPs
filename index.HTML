@@ -1,362 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyVIPs</title>
-    <!-- CSS only -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header>
-      <nav class="navbar bg-white">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.HTML">
-            <img
-              src="_img/diamond.png"
-              alt="Logo"
-              width="100"
-              height="100"
-              class="d-inline-block align-text-top"
-            />
-            <h1>MyVIPs</h1>
-          </a>
-          <a href="" id="btn-login" class="login">
-            <h2>Login</h2>
-          </a>
-          <a href="" id="btn-registro" class="registro">
-            <h2>Registro</h2>
-          </a>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyVIPs</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <!-- CAROUSEL -->
-    <section>
-      <figure>
-        <div
-          id="carouselExampleControls"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div id="carousel" class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="_img/Balada.jpeg"
-                class="d-block w-100"
-                alt="Imagem de Pessoas Na Balada Dançando"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="_img/Casamento.png"
-                class="d-block w-100"
-                alt="Pessoas Comemorando um casamento"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="_img/Infantil.jpg"
-                class="d-block w-100"
-                alt="Crianças Cantando Parabéns"
-              />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </figure>
-    </section>
-
-    <!-- MAIN -->
-    <main id="conteudo">
-      <div class="jumbotron">
-        <h1 class="display-4">Listas Analógicas São Passado!</h1>
-        <p class="lead">
-          Todas as informações sobre os convidados em um só lugar
-        </p>
-        <hr class="my-4" />
-        <p>
-          A família, os amigos, os colegas de trabalho... Organize-os
-          confortavelmente com a ferramenta de Convidados e gerencie todos os
-          detalhes. Organize facilmente todos os detalhes da sua lista de
-          convidados: crie grupos, assinale cardápios e mesas e peça de forma
-          rápida e simples a confirmação de presença ou o endereço para enviar o
-          convite.
-        </p>
-        <p>
-          Crie grupos de convidados Reúna os seus convidados em diferentes
-          grupos, visualize o seu mapa de mesas e, depois, organize-as de forma
-          fácil e divertida.
-        </p>
-        <p>
-          Acompanhe diariamente os convidados que já confirmaram presença e quem
-          ainda não respondeu à sua solicitação.
-        </p>
-        <p>
-          Já está com os seus convites prontos para enviar, mas não sabe os
-          endereços de alguns convidados? Envie um e-mail para que preencham a
-          sua informação, recolha e organize facilmente os seus dados por meio
-          do Gestor de Convidados e exporte-os para organizar o envio. Você verá
-          como é fácil e prático!
-        </p>
-        <p>
-          Criar e organizar a lista de convidados é, muitas vezes, um motivo de
-          discussão entre os casais que estão organizando o seu casamento. O
-          Gestor de Convidados evitará mais esse problema. Importe e adicione
-          convidados, crie grupos, envie confirmação de presença por e-mail ou
-          defina o tipo de cardápio.
-        </p>
+<body>
+  <header>
+    <nav class="navbar bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.HTML">
+          <img src="_img/diamond.png" alt="Logo" width="100" height="100" class="d-inline-block align-text-top" />
+          <h1>MyVIPs</h1>
+        </a>
+        <a href="" id="btn-login" class="login">
+          <h2>Login</h2>
+        </a>
+        <a href="" id="btn-registro" class="registro">
+          <h2>Registro</h2>
+        </a>
       </div>
-    </main>
+    </nav>
+  </header>
 
-    <!-- Modal -->
-    <div id="modal-container">
-      <div
-        class="modal fade"
-        id="modalLogin"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Bem Vindo</h5>
-              <button
-                id = "fechaLogin"
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form id="form-login" class="bg-black text-white p-4">
-                <div class="form-group">
-                  <label for="login-username">Username</label>
-                  <input type="text" class="form-control" id="login-username" />
-                </div>
-                <div class="form-group">
-                  <label for="login-senha">Senha</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="login-senha"
-                  />
-                </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <button id="btn-logar" class="btn btn-primary" type="button">
-                    Entrar
-                  </button>
-                </div>
-              </form>
-            </div>
+  <!-- CAROUSEL -->
+  <section>
+    <figure>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div id="carousel" class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="_img/Balada.jpeg" class="d-block w-100" alt="Imagem de Pessoas Na Balada Dançando" />
+          </div>
+          <div class="carousel-item">
+            <img src="_img/Casamento.png" class="d-block w-100" alt="Pessoas Comemorando um casamento" />
+          </div>
+          <div class="carousel-item">
+            <img src="_img/Infantil.jpg" class="d-block w-100" alt="Crianças Cantando Parabéns" />
           </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <div
-        class="modal fade"
-        id="modalRegistro"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                Vamos Criar Sua Conta
-              </h5>
-              <button
-                id="fecharegistro"
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form id="form-registro" class="bg-black text-white p-4">
-                <div class="form-group">
-                  <label for="input-registro-username">Username</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="input-registro-username"
-                  />
-                  <small id="emailHelp" class="form-text text-white"
-                    >Essa Será sua forma de Login e recuperação de conta </small
-                  >
-                </div>
-                <div class="form-group">
-                  <label for="input-registro-senha">Senha</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="input-registro-senha"
-                  />
-                </div>
+    </figure>
+  </section>
 
-                <div class="form-group">
-                  <label for="input-registro-repetir-senha"
-                    >Repita a Senha</label
-                  >
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="input-registro-repetir-senha"
-                  />
-                </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <button
-                    id="btn-cadastrar"
-                    class="btn btn-primary my-4"
-                    type="button"
-                  >
-                    Criar Conta
-                  </button>
-                </div>
-              </form>
-            </div>
+  <!-- MAIN -->
+  <main id="conteudo">
+    <div class="jumbotron">
+      <h1 class="display-4">Listas Analógicas São Passado!</h1>
+      <p class="lead">
+        Todas as informações sobre os convidados em um só lugar
+      </p>
+      <hr class="my-4" />
+      <p>
+        A família, os amigos, os colegas de trabalho... Organize-os
+        confortavelmente com a ferramenta de Convidados e gerencie todos os
+        detalhes. Organize facilmente todos os detalhes da sua lista de
+        convidados: crie grupos, assinale cardápios e mesas e peça de forma
+        rápida e simples a confirmação de presença ou o endereço para enviar o
+        convite.
+      </p>
+      <p>
+        Crie grupos de convidados Reúna os seus convidados em diferentes
+        grupos, visualize o seu mapa de mesas e, depois, organize-as de forma
+        fácil e divertida.
+      </p>
+      <p>
+        Acompanhe diariamente os convidados que já confirmaram presença e quem
+        ainda não respondeu à sua solicitação.
+      </p>
+      <p>
+        Já está com os seus convites prontos para enviar, mas não sabe os
+        endereços de alguns convidados? Envie um e-mail para que preencham a
+        sua informação, recolha e organize facilmente os seus dados por meio
+        do Gestor de Convidados e exporte-os para organizar o envio. Você verá
+        como é fácil e prático!
+      </p>
+      <p>
+        Criar e organizar a lista de convidados é, muitas vezes, um motivo de
+        discussão entre os casais que estão organizando o seu casamento. O
+        Gestor de Convidados evitará mais esse problema. Importe e adicione
+        convidados, crie grupos, envie confirmação de presença por e-mail ou
+        defina o tipo de cardápio.
+      </p>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal-container">
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Bem Vindo</h5>
+            <button id="fechaLogin" type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form-login" class="bg-black text-white p-4">
+              <div class="form-group">
+                <label for="login-username">Username</label>
+                <input type="text" class="form-control" id="login-username" />
+              </div>
+              <div class="form-group">
+                <label for="login-senha">Senha</label>
+                <input type="password" class="form-control" id="login-senha" />
+              </div>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button id="btn-logar" class="btn btn-primary" type="button">
+                  Entrar
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
+    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Vamos Criar Sua Conta
+            </h5>
+            <button id="fecharegistro" type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form-registro" class="bg-black text-white p-4">
+              <div class="form-group">
+                <label for="input-registro-username">Username</label>
+                <input type="text" class="form-control" id="input-registro-username" />
+                <small id="emailHelp" class="form-text text-white">Essa Será sua forma de Login e recuperação de conta
+                </small>
+              </div>
+              <div class="form-group">
+                <label for="input-registro-senha">Senha</label>
+                <input type="password" class="form-control" id="input-registro-senha" />
+              </div>
 
-    <!-- FOOTER -->
-    <footer class="text-center text-lg-start bg-light text-muted">
-      <!-- Section: Social media -->
-      <section
-        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-      >
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-          <h5>Fale Conosco</h5>
+              <div class="form-group">
+                <label for="input-registro-repetir-senha">Repita a Senha</label>
+                <input type="password" class="form-control" id="input-registro-repetir-senha" />
+              </div>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button id="btn-cadastrar" class="btn btn-primary my-4" type="button">
+                  Criar Conta
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        <!-- Left -->
-
-        <!-- Right -->
-        <div>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-        <!-- Right -->
-      </section>
-      <!-- Section: Social media -->
-
-      <!-- Section: Links  -->
-      <section class="">
-        <div class="container text-center text-md-start mt-5">
-          <!-- Grid row -->
-          <div class="row mt-3">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <!-- Content -->
-              <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3"></i>MyVIPs
-              </h6>
-              <p>Simples, Seguro e Intuitivo</p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Criadores</h6>
-              <p>
-                <a href="#!" class="text-reset">Alexandre</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Pedro Godri</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Tcharles</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Junior</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Bernardo</a>
-              </p>
-            </div>
-             
-          <!-- Grid row -->
-        </div>
-      </section>
-      <!-- Section: Links  -->
-
-      <!-- Copyright -->
-      <div
-        class="text-center p-4"
-        style="background-color: rgba(0, 0, 0, 0.05)"
-      >
-         2022 Copyright©
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
-          >MyVIPs.com</a
-        >
       </div>
-      <!-- Copyright -->
-    </footer>
+    </div>
+  </div>
 
-    <!-- JQUERY -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"
-    ></script>
-    <!-- BOOTSTRAP -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="./main.js"></script>
-    <script src="./storage.js"></script>
-    <script src="./scripts.js"></script>
-  </body>
+  <!-- FOOTER -->
+  <footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <h5>Fale Conosco</h5>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>MyVIPs
+            </h6>
+            <p>Simples, Seguro e Intuitivo</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Criadores</h6>
+            <p>
+              <a href="https://github.com/AlexSchwC" class="text-reset">Alexandre</a>
+            </p>
+            <p>
+              <a href="https://github.com/pedrogodri" class="text-reset">Pedro Godri</a>
+            </p>
+            <p>
+              <a href="https://github.com/tcharlesmaia" class="text-reset">Tcharles</a>
+            </p>
+            <p>
+              <a href="https://github.com/juninhocb" class="text-reset">Junior</a>
+            </p>
+            <p>
+              <a href="https://github.com/Digrifi" class="text-reset">Bernardo</a>
+            </p>
+          </div>
+
+          <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
+      2022 Copyright©
+      <a class="text-reset fw-bold" href="index.html">MyVIPs.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <!-- BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script type="module" src="./main.js"></script>
+  <script src="./storage.js"></script>
+  <script src="./scripts.js"></script>
+</body>
+
 </html>
