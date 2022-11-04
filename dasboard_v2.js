@@ -111,7 +111,6 @@ function ListarContatos() {
             <button id="btn-excluir-${vip.Id}" class="btn btn-sm btn-danger btn-actions">&times;</button>
             <button id="btn-editar-${vip.Id}" class="btn btn-sm btn-warning btn-actions">&times;</button>
         </div>`);
-
         $(colId).html(vip.Id);
         $(colNome).html(vip.Nome);
         $(colEmail).html(vip.Email);
@@ -193,13 +192,15 @@ function PopulaEditForm (id) {
     $('#select-status').val(vip[0].Status);
     $('#input-id-vip').val(vip[0].Id);
 }
-
 function addEventDeleteVip (id) {
     $(`#btn-excluir-${id}`).click((e) => {
         RemoveVIP(id);
     })
 }
 
+function editItemList (id) {
+
+}
 function addEventEditVip (id) {
     $(`#btn-editar-${id}`).click((e) => {
         PopulaEditForm(id);
