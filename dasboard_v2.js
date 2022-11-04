@@ -79,6 +79,8 @@ $(document).ready(() => {
         } else {
             alert('Ei, o que você está fazendo aqui?, você não está logado!');
         }
+
+        ListarContatos();
     })
 
     ListarContatos();
@@ -102,10 +104,8 @@ function ListarContatos() {
         var colStatus = document.createElement("td");
         var colActions = document.createElement("td");
         $(colActions).html(`<div class="d-flex">
-            <button onclick="removeItemList(${vip.id});" 
-            class="btn btn-sm btn-danger btn-actions">&times;</button>
-            <button onclick="editItemList(${vip.id});" 
-            class="btn btn-sm btn-warning btn-actions">&times;</button>
+            <button class="btn btn-sm btn-danger btn-actions btn-excluir-vip">&times;</button>
+            <button class="btn btn-sm btn-warning btn-actions btn-editar-vip">&times;</button>
         </div>`);
 
         $(colId).html(vip.Id);
@@ -115,8 +115,10 @@ function ListarContatos() {
         $(colStatus).html(vip.Status);
         $(linha).append(colId).append(colNome).append(colEmail).append(colIdade).append(colStatus).append(colActions);
         listaHTML.append(linha);
+
+        addEventDeleteVip(vip.Id);
+        addEventEditVip(vip.Id);
     });
-    
 }
 
 function verificaLogin () {
@@ -129,17 +131,29 @@ function verificaLogin () {
 
 function removeItemList (id) {
     let user = getJsonItem(getItem('userLogado'));
+    let contagem = 0;
     user.ContatosVIP.forEach(vip => {
-        if (vip.Id);
+        if (vip.Id === id) {
+            return user.ContatosVIP.splice(contagem, 1);
+        }
+        contagem++;
     })
+    setJsonItem(user.Username, user);
+    ListarContatos();
 }
 
 function editItemList (id) {
 
 }
 
-function regEventClickTr () {
-    $("tr").click((e) => {
-      
-    });
+function addEventDeleteVip (id) {
+    $('.btn-excluir-vip').click((e) => {
+        removeItemList(id);
+    })
+}
+
+function addEventEditVip (id) {
+    $('.btn-editar-vip').click((e) => {
+        removeItemList(id);
+    })
 }
