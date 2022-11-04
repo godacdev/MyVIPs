@@ -104,8 +104,8 @@ function ListarContatos() {
         var colStatus = document.createElement("td");
         var colActions = document.createElement("td");
         $(colActions).html(`<div class="d-flex">
-            <button class="btn btn-sm btn-danger btn-actions btn-excluir-vip">&times;</button>
-            <button class="btn btn-sm btn-warning btn-actions btn-editar-vip">&times;</button>
+            <button class="btn btn-sm btn-danger btn-actions btn-excluir-vip"><img src="_img/trash.svg"></button>
+            <button class="btn btn-sm btn-warning btn-actions btn-editar-vip"><img src="_img/pencil.svg"></button>
         </div>`);
 
         $(colId).html(vip.Id);
@@ -142,16 +142,15 @@ function removeItemList (id) {
     ListarContatos();
 }
 
-function editItemList (id) {
-
-}
-
 function addEventDeleteVip (id) {
     $('.btn-excluir-vip').click((e) => {
         removeItemList(id);
     })
 }
 
+function editItemList (id) {
+
+}
 function addEventEditVip (id) {
     $('.btn-editar-vip').click((e) => {
         removeItemList(id);
